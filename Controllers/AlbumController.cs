@@ -2,7 +2,7 @@
 
 namespace TDSTecnologia.FaceAlbum.Web.Controllers
 {
-    public class HomeController : Controller
+    public class AlbumController : Controller
     {
         public IActionResult Index()
         {
