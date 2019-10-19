@@ -30,10 +30,15 @@
                     @Html.DisplayFor(modelItem => item.DataFoto)
                 </td>
                 <td>
-                    <a asp-action="Alterar" asp-route-id="@item.AlbumId" class="btn btn-sm btn-warning">Atualizar</a>
+                    <a asp-action="Alterar" asp-route-id="@item.AlbumId" class="btn btn-sm btn-warning">Atualizar</a>|
+                    <a class="btn btn-sm btn-danger" data-toggle="modal" data-target="#modal-excluir" onclick="ExcluirAlbum(@item.AlbumId)">Excluir</a>
                 </td>
             </tr>
             }
         </tbody>
     </table>
 </div>
+
+<partial name="_ModalExcluirAlbumPartial.cshtml" />
+
+

@@ -93,5 +93,13 @@ namespace TDSTecnologia.FaceAlbum.Web.Controllers
             return _context.Albuns.Any(e => e.AlbumId == id);
         }
 
+        [HttpPost]
+        public JsonResult Excluir(int AlbumId)
+        {
+            var album =  _context.Albuns.Find(AlbumId);
+            _context.Albuns.Remove(album);
+            _context.SaveChanges();
+            return Json("Album excluído com sucesso!!!");
+        }
     }
 }
